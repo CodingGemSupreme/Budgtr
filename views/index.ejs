@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgtr All</title>
+</head>
+<body>
+    <h1>Budgtr All</h1>
+    <% const BankAccount = allBudgets.reduce(previousValue, currentValue)=> previousValue + currentValue.amount, 0,)%>
+    <% if(bankAccount < 0) { %>
+    <span style="color:darkred">Low Funds</span>
+<% } else if (bankaccount > 1000) { %>
+<span style="color:blue"></span>
+<% } %>
+
+<h5>Bank Account</h5>
+<p><em><%=bankAccount%></em></p>
+
+<div class="container"
+<button><a href="/budgets/new">New Item</a></button>
+
+<table>
+    <tr>
+        <% for (let x=0; x <allBudgets.length; x++ ) { %>
+
+            <td>
+                <%=allBudgets[x].date %>
+            </td>
+
+            <td>
+                <a href ="/budgets/<%=x%>">
+                    <%=allBudgets[x].name%>
+                    <%=allBudgets[x].from%>
+                </a>
+            </td>
+            <td>
+                <%=allBudgets[x].amount %>
+            </td>
+    </tr>
+    <% } %>
+</table>
+</body>
+</html>
