@@ -12,7 +12,7 @@
 </head>
 <body>
     <h1>Budgtr All</h1>
-    <% const bankAccount = 1 %>
+    <!-- <% const bankAccount = 0  %> -->
     <% if(bankAccount < 0) { %>
     <span style="color:darkred">Low Funds</span>
 <% } else if (bankAccount > 1000) { %>
@@ -22,9 +22,11 @@
 <h5>Bank Account</h5>
 <p><em><%=bankAccount%></em></p>
 
-<div class="container"
-<button><a href="/budgets/new">New Item</a></button>
+<div class="container">
 
+    <button><a href="/budgets/new">New Item</a></button>
+
+</div>
 <table>
     <tr>
         <% for (let x=0; x <allBudgets.length; x++ ) { %>

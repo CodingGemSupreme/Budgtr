@@ -7,7 +7,7 @@ const budget = require("./models/budget.js");
 
 //**ROUTES**
 app.use((req, res, next) => {
-  console.log("I run for all routes")
+  console.log("Your routes are running")
   next()
 });
 
@@ -37,9 +37,9 @@ app.get("/budgets/:index", (req, res)=>{
 });
 
 app.get("/", (req, res) =>{
-  res.send("Welcome to the Budgtr App!");
+  res.send("Budgeter is connected to terminal 3000");
 });
 
 app.listen(port, () =>{
-  console.log("express is listening")
+  console.log("express is getting to these budgets")
 })
