@@ -12,6 +12,8 @@ app.use((req, res, next) => {
 });
 
 app.use(express.urlencoded({ extended: false }))
+app.use('/css', express.static('css'));
+app.use(express.static('public'));
 
 app.get("/budgets", (req, res) => {
   res.render("index.ejs", {
@@ -30,7 +32,7 @@ res.redirect("/budgets")
 
 app.get("/budgets/:index", (req, res)=>{
   res.render("show.ejs", {
-    budgets: budgets[req.params.index]
+    budgets: budget[req.params.index]
   });
 });
 
